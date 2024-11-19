@@ -1,0 +1,13 @@
+# tasks.yaml
+search_task:
+  description: >
+    Realize uma busca na web pelo termo fornecido e retorne os resultados.
+    Utilize o mecanismo de cache para otimizar as consultas repetitivas.
+    Caso o resultado já esteja em cache, retorne o valor armazenado.
+    Termo de Busca:
+    {search_term}
+  expected_output: >
+    O resultado da busca na web, otimizado pelo cache.
+  agent: search_agent
+  args:
+    query: "{search_term}"  # Adiciona o mapeamento explícito para `query`
